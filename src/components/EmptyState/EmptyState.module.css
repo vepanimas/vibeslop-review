@@ -1,0 +1,13 @@
+.empty {
+  text-align: center;
+  padding: var(--space-7) var(--space-5);
+  color: var(--color-text-muted);
+}
+.emoji {
+  font-size: 36px;
+  margin-bottom: var(--space-3);
+}
+.text {
+  margin-top: var(--space-2);
+  font-size: 13px;
+}

@@ -1,0 +1,118 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+.input {
+  height: 36px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+.input:focus {
+  outline: 2px solid var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+.help {
+  font-size: 12px;
+  color: var(--color-text-faint);
+}
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+}
+.save {
+  height: 34px;
+  padding: 0 var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 550;
+}
+.save:hover {
+  background: var(--color-primary-hover);
+}
+.save:disabled {
+  cursor: not-allowed;
+}
+
+.toggleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+.toggleRow:last-child {
+  border-bottom: none;
+}
+.toggleLabel {
+  font-weight: 550;
+}
+.toggleDesc {
+  font-size: 12.5px;
+  color: var(--color-text-faint);
+}
+.switch {
+  flex-shrink: 0;
+  width: 40px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--color-border);
+  position: relative;
+  transition: background-color 150ms ease;
+}
+.switchOn {
+  background: var(--color-primary);
+}
+.knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 150ms ease;
+}
+.switchOn .knob {
+  transform: translateX(18px);
+}
+
+.danger {
+  border-color: #fecaca;
+}
+.dangerText {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
