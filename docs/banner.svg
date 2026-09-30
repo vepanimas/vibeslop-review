@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b2e"/>
+      <stop offset="1" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#a78bfa" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="card"><rect x="700" y="48" width="440" height="224" rx="14"/></clipPath>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="20" fill="url(#bg)"/>
+  <circle cx="1050" cy="40" r="140" fill="#7c3aed" opacity="0.25" filter="url(#blur)">
+    <animate attributeName="cx" values="1050;980;1050" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="300" r="120" fill="#fbbf24" opacity="0.12" filter="url(#blur)">
+    <animate attributeName="cy" values="300;250;300" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- logo -->
+  <g transform="translate(64 64)">
+    <rect width="56" height="56" rx="13" fill="#7c3aed"/>
+    <path d="M14 36c3.5-10.5 7-15.75 14-15.75S38.5 25.5 42 36c-5.25-3.5-8.75-3.5-14-3.5S19.25 32.5 14 36z" fill="#fbbf24"/>
+    <circle cx="22.75" cy="24.5" r="2.8" fill="#1e1b4b"/>
+    <circle cx="33.25" cy="24.5" r="2.8" fill="#1e1b4b"/>
+  </g>
+
+  <text x="136" y="92" font-size="14" font-weight="600" fill="#a78bfa" letter-spacing="3">CERTIFIED SLOP INSPECTOR</text>
+  <text x="136" y="136" font-size="42" font-weight="800" fill="#ffffff" letter-spacing="-1">VibeSlop Review</text>
+  <text x="64" y="188" font-size="18" fill="#c4c0d8">A code review tool for pull requests written by machines,</text>
+  <text x="64" y="214" font-size="18" fill="#c4c0d8">reviewed by humans, approved by accident.</text>
+
+  <g font-size="13" font-weight="600">
+    <rect x="64" y="240" width="92" height="28" rx="14" fill="#7c3aed" opacity="0.25"/>
+    <text x="110" y="259" text-anchor="middle" fill="#c4b5fd">React 19</text>
+    <rect x="164" y="240" width="108" height="28" rx="14" fill="#7c3aed" opacity="0.25"/>
+    <text x="218" y="259" text-anchor="middle" fill="#c4b5fd">TypeScript</text>
+    <rect x="280" y="240" width="72" height="28" rx="14" fill="#7c3aed" opacity="0.25"/>
+    <text x="316" y="259" text-anchor="middle" fill="#c4b5fd">Vite</text>
+  </g>
+
+  <!-- code card -->
+  <g clip-path="url(#card)">
+    <rect x="700" y="48" width="440" height="224" rx="14" fill="#14121f" stroke="#3b3555"/>
+    <rect x="700" y="48" width="440" height="34" fill="#1c192b"/>
+    <circle cx="722" cy="65" r="5" fill="#ef4444"/><circle cx="740" cy="65" r="5" fill="#f59e0b"/><circle cx="758" cy="65" r="5" fill="#22c55e"/>
+    <text x="800" y="70" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8a85a6">src/payments/charge.ts</text>
+
+    <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
+      <text x="724" y="112" fill="#6b6784">1</text>
+      <text x="752" y="112"><tspan fill="#c4b5fd">async function</tspan><tspan fill="#e6e3f5"> chargeCard(card: </tspan><tspan fill="#fbbf24">any</tspan><tspan fill="#e6e3f5">) {</tspan></text>
+      <text x="724" y="136" fill="#6b6784">2</text>
+      <text x="752" y="136"><tspan fill="#e6e3f5">  </tspan><tspan fill="#c4b5fd">try</tspan><tspan fill="#e6e3f5"> { </tspan><tspan fill="#c4b5fd">return</tspan><tspan fill="#e6e3f5"> </tspan><tspan fill="#c4b5fd">await</tspan><tspan fill="#e6e3f5"> api.charge(card) }</tspan></text>
+
+      <rect x="700" y="146" width="440" height="24" fill="#fbbf24" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.16;0.16" keyTimes="0;0.35;0.45;1" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <text x="724" y="163" fill="#6b6784">3</text>
+      <text x="752" y="163"><tspan fill="#e6e3f5">  </tspan><tspan fill="#c4b5fd">catch</tspan><tspan fill="#e6e3f5"> (e) {}</tspan></text>
+
+      <text x="724" y="188" fill="#6b6784">4</text>
+      <text x="752" y="188"><tspan fill="#8a85a6">  // If we get here, everything is fine</tspan></text>
+      <text x="724" y="213" fill="#6b6784">5</text>
+      <text x="752" y="213"><tspan fill="#e6e3f5">  </tspan><tspan fill="#c4b5fd">return</tspan><tspan fill="#e6e3f5"> </tspan><tspan fill="#fbbf24">true</tspan></text>
+      <text x="724" y="238" fill="#6b6784">6</text>
+      <text x="752" y="238" fill="#e6e3f5">}</text>
+    </g>
+
+    <!-- scan line -->
+    <rect x="700" y="82" width="440" height="3" fill="url(#glow)">
+      <animate attributeName="y" values="82;272;82" keyTimes="0;0.4;1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.38;0.42;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- flag badge -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.42;0.5;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <rect x="1000" y="150" width="128" height="20" rx="10" fill="#fbbf24"/>
+      <text x="1064" y="164" text-anchor="middle" font-size="11" font-weight="700" fill="#1e1b2e">⚠ EMPTY CATCH</text>
+    </g>
+  </g>
+
+  <!-- slop score -->
+  <g transform="translate(1085 232)" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.45;0.55;0.92;1" dur="6s" repeatCount="indefinite"/>
+    <circle r="26" fill="#1e1b2e" stroke="#3b3555" stroke-width="2"/>
+    <circle r="26" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" transform="rotate(-90)" stroke-dasharray="163.4" stroke-dashoffset="163.4">
+      <animate attributeName="stroke-dashoffset" values="163.4;163.4;9.8;9.8;163.4" keyTimes="0;0.45;0.7;0.92;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <text y="5" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">94</text>
+  </g>
+</svg>
